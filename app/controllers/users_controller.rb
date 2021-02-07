@@ -8,17 +8,17 @@ before_action :set_user, only: [:follow, :unfollow, :show, :update]
   end
 
   def show
-    render json: @user
+    render json: { user: @user }
   end
 
   def follow
     current_user.follow(params[:id])
-    redirect_to page_path(@user.id)
+    render json: { user: @users }
   end
 
   def unfollow
     current_user.unfollow(params[:id])
-    redirect_to page_path(@user.id)
+    render json: { user: @users }
   end
 
   # REGISTER
@@ -34,8 +34,7 @@ before_action :set_user, only: [:follow, :unfollow, :show, :update]
 
   def update
     @user = User.find(params[:id])
-    @user.learns = params[:learn]
-    @user.update
+    @user.update(user_params)
     render json: @user
   end
 
@@ -62,6 +61,6 @@ before_action :set_user, only: [:follow, :unfollow, :show, :update]
   end
 
   def user_params
-    params.permit(:email, :name, :password, :age, :description, :linkedin, :github, :learns =>[], :carrers => [], :instructs => [])
+    params.permit(:id, :email, :name, :password, :age, :description, :linkedin, :github, :learns, :carrers, :instructs )
   end
 end

@@ -4,5 +4,6 @@ class FollowersController < ApplicationController
     @followings = current_user.following_ids.map do |id|
       User.find(id)
     end
+    render json: @followers
   end
 end

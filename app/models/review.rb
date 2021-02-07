@@ -14,9 +14,9 @@ class Review < ApplicationRecord
 
   def user_level
     case self.rating.score
-    when condition == 50 then @user.user_level == 'Flor'
-    when condition == 30...50 then @user.user_level == 'Broto'
-    when condition <= 20 then @user.user_level == 'Semente'
+    when condition >= 20 then @user.user_level == 'Flor'
+    when condition == 10...20 then @user.user_level == 'Broto'
+    when condition <= 10 then @user.user_level == 'Semente'
     end
   end
 end
