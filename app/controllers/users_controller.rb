@@ -1,12 +1,24 @@
 class UsersController < ApplicationController
 before_action :authorized, only: [:auto_login]
-before_action :set_user, only: [:show]
+before_action :set_user, only: [:follow, :unfollow, :show, :update]
 
   def index
     @users = User.all
+    render json: { user: @users }
   end
 
   def show
+    render json: @user
+  end
+
+  def follow
+    current_user.follow(params[:id])
+    redirect_to page_path(@user.id)
+  end
+
+  def unfollow
+    current_user.unfollow(params[:id])
+    redirect_to page_path(@user.id)
   end
 
   # REGISTER
@@ -18,6 +30,13 @@ before_action :set_user, only: [:show]
     else
       render json: {error: "Invalid email or password"}
     end
+  end
+
+  def update
+    @user = User.find(params[:id])
+    @user.learns = params[:learn]
+    @user.update
+    render json: @user
   end
 
   # LOGGING IN
@@ -43,6 +62,6 @@ before_action :set_user, only: [:show]
   end
 
   def user_params
-    params.permit(:email, :name, :password, :age, :description, :linkedin, :github, :learns =>[], :carrers => [], :learns => [])
+    params.permit(:email, :name, :password, :age, :description, :linkedin, :github, :learns =>[], :carrers => [], :instructs => [])
   end
 end

@@ -6,13 +6,11 @@ career3 = Career.create!( category: 'Design')
 career4 = Career.create!( category: 'Liderança/Agile')
 career5 = Career.create!( category: 'Data')
 
-
 learn1 = Learn.create!( category: 'Revisão de Currículo')
 learn2 = Learn.create!( category: 'Revisão de Portifólio')
 learn3 = Learn.create!( category: 'Simulação de Entrevistas')
 learn4 = Learn.create!( category: 'Orientação de Carreira')
 learn5 = Learn.create!( category: 'Ajuda Técnica')
-
 
 instruct1 = Instruct.create!( category: 'Revisão de Currículo')
 instruct2 = Instruct.create!( category: 'Revisão de Portifólio')
