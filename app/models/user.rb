@@ -3,9 +3,9 @@ class User < ApplicationRecord
 
   has_many :reviews
 
-  has_many :carrers, through: :user_careers
-  has_many :instructs, through: :user_instructs
-  has_many :learns, through: :user_learns
+  has_many :carrers
+  has_many :instructs
+  has_many :learns
 
   has_many :follower_relationships, foreign_key: :following_id, class_name: 'Follow'
   has_many :followers, through: :follower_relationships, source: :follower

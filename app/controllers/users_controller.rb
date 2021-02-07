@@ -23,7 +23,14 @@ class UsersController < ApplicationController
 
   # REGISTER
   def create
-    @user = User.create(user_params)
+    @user = User.new(user_params)
+
+    if @user.save
+      @learns = Learn.new(params[:learns])
+      @careers = Career.new(params[:careers])
+      @instructs = Instruct.new(params[:instructs])
+    end
+
     if @user.valid?
       token = encode_token({user_id: @user.id})
       render json: {user: @user, token: token}
