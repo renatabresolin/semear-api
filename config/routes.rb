@@ -11,7 +11,10 @@ Rails.application.routes.draw do
     post ':id/follow', to: "users#follow", as: "follow"
     post ':id/unfollow', to: "users#unfollow", as: "unfollow"
   end
-  resources :followers, only: :index
+  resources :followers, only: [:index]
+  resources :learns, only: [:index]
+  resources :careers, only: [:index]
+  resources :instructs, only: [:index]
 end
 
 

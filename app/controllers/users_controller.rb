@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-before_action :authorized, only: [:auto_login]
-before_action :set_user, only: [:follow, :unfollow, :show, :update]
+  before_action :authorized, only: [:auto_login]
+  before_action :set_user, only: [:follow, :unfollow, :show, :update]
 
   def index
     @users = User.all
