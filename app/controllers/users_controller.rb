@@ -1,5 +1,13 @@
 class UsersController < ApplicationController
 before_action :authorized, only: [:auto_login]
+before_action :set_user, only: [:show]
+
+  def index
+    @users = User.all
+  end
+
+  def show
+  end
 
   # REGISTER
   def create
@@ -24,15 +32,18 @@ before_action :authorized, only: [:auto_login]
     end
   end
 
-
   def auto_login
     render json: @user
   end
 
   private
 
+  def set_user
+    @user = User.find(params[:id])
+    authorize(@tourist)
+  end
+
   def user_params
     params.permit(:email, :name, :password, :age, :description, :linkedin, :github)
   end
-
 end
