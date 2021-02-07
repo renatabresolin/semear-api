@@ -40,10 +40,9 @@ before_action :set_user, only: [:show]
 
   def set_user
     @user = User.find(params[:id])
-    authorize(@tourist)
   end
 
   def user_params
-    params.permit(:email, :name, :password, :age, :description, :linkedin, :github)
+    params.permit(:email, :name, :password, :age, :description, :linkedin, :github, :learns =>[], :carrers => [], :learns => [])
   end
 end
