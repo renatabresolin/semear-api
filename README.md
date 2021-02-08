@@ -43,16 +43,12 @@ Consiste em uma aplicação chamada SEMEAR, utilizada parta transmitir e gerar c
 
 ## Deploy da Aplicação com HEROKU :dash:
 
->
+> https://git.heroku.com/semear.git
 
 ## Equipe 7 - Flaming Flamingos :octocat:
 
 - Jennifer Dennis
-
 - Kelly Diniz
-
 - Renata Bresolin
-
 - Renata Karato
-
 - Thais Teixeira
