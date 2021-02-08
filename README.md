@@ -1,11 +1,11 @@
 <h1 align="center"> SEMEAR </h1>
 <h2 align="center"> REST API construída para o desafio proposto pelo hackaton da Provi - ProviHack Woman. 💪 </h2>
 
-## Sobre o Projeto ⚠️
+## Sobre o Projeto 👩‍💻
 
 Consiste em uma aplicação chamada SEMEAR, utilizada parta transmitir e gerar conhecimento. Através de uma rede de apoio, motivação e aprendizado, mulheres da área de tecnologia em seu início de carreira, trocam experiências e conhecimentos, com o objetivo de gerar auto confiança na busca pela primeira oportunidade no mercado de trabalho.
 
-> Status do Projeto: Em desenvolvimento :heavy_check_mark:
+> Status do Projeto: Em desenvolvimento ⚠️
 
 ## Figma - Design da Aplicação 🎭
 
