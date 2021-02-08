@@ -28,6 +28,7 @@ Consiste em uma aplicação chamada SEMEAR, utilizada parta transmitir e gerar c
 - gem 'bcrypt'
 - gem 'rack-cors'
 - gem 'jwt'
+- PostgreSQL
 
 ## Passos para rodar a aplicação :computer:
 
@@ -45,7 +46,7 @@ Consiste em uma aplicação chamada SEMEAR, utilizada parta transmitir e gerar c
 
 > https://git.heroku.com/semear.git
 
-## Equipe 7 - Flaming Flamingos :octocat:
+## Equipe 7 - Flaming Flamingos 🦩🔥
 
 - Jennifer Dennis
 - Kelly Diniz
